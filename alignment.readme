@@ -1,0 +1,10 @@
+README for programming homework 1
+Hazel Court
+
+To run the program on a Linux or Mac machine, place hw1.py in a folder containing the text files you want to test.  Open a terminal, and type:
+    ./hw1.py NAMEOFTEST
+with NAMEOFTEST replaced with the name of the text file you want to test.
+Then press enter.
+
+Example:
+    ./hw1.py test1.in

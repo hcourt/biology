@@ -1,0 +1,10 @@
+README for programming homework 2
+Hazel Court
+
+To run the program on a Linux or Mac machine, place hw2.py in a folder containing the text files you want to test.  Open a terminal, and type:
+    ./hw2.py NAMEOFTEST
+with NAMEOFTEST replaced with the name of the text file you want to test.
+Then press enter.
+
+Example:
+    ./hw2.py test1.in

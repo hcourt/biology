@@ -1,0 +1,9 @@
+Explanation for programming homework 2
+Hazel Court
+
+1. How did you pick the initial point for x?
+    x begins at the origin.  This is in reality an arbitrary point, so in practice shifting start_x around for multiple trials is a good idea.  Picking an arbitrary "middle" is easier and simpler than trying to "guess" the location of a global minimum.  Doing so would involve picking n positions, finding the minimum energy, and starting there.  However, the accuracy of this guess is dependant on the value of n, which increases as n approaches infinity, at which point this annealing algorithm becomes obsolete and my computer hangs indefinitely.
+2. How did you pick the new x to move to?
+    A point to the right of x is chosen (x1), and a point to the left is chosen (x2).  Their energies are calculated and compared.  The program allows x to move if: either of the new energies is lower than the current energy (the smallest is picked); or the probability (exp(-E(x#)/kT)) of x1 or x2 is higher than a random number between 0 and 1.  This allows x to move to a higher energy in some cases at higher temperatures, such that x is not stuck in a local minima.
+3. What is the cooling schedule?
+    The current temperature is multiplied by a scaling factor that is set in the beginning of the program.  This allows for high mobility in the beginning for a short time, then more conservative guesses as the iteration progresses.  The scaling factor and the starting temperature themselves should be, in practice, altered with the input, so multiple trials with different starting temperatures and scaling factors is a good idea.
